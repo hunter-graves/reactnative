@@ -5,8 +5,10 @@ export default function App() {
   const[outputText, setOutputText] = useState('Open up App.js to start working on your App')
   return (
     <View style={{padding: 50}}>
-      <View>
-        <TextInput placeholder="Course Goal" style={{borderBottomColor: 'black', borderBottomWidth: 1 }}/>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+        <TextInput
+         placeholder="Course Goal" 
+         style={{ width: 200, borderBottomColor: 'black', borderBottomWidth: 1 }}/>
         <Button title="ADD"/>
       </View>
     </View>
