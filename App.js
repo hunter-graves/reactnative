@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
-   StyleSheet, 
-   View, 
+    StyleSheet, 
+    View, 
     Button, 
     FlatList 
   } from 'react-native';
@@ -19,6 +19,7 @@ export default function App() {
       ...courseGoals, 
       {id: Math.random().toString(), value: goalTitle }
     ]);
+    setIsAddMode(false);
   };
 
   const removeGoalHandler = goalId => {
@@ -28,11 +29,18 @@ export default function App() {
     });
   };
 
+  const cancelGoalAdditionHandler = () => {
+    setIsAddMode(false);
+  }
+
 
   return (
     <View style={Styles.screen}>
-      <Button title="Add New Goal" onPress={() => setIsAddMode(true)}/>
-      <GoalInput visible={isAddMode} onAddGoal={addGoalHandler}/>
+      <Button title="Add New Goal" onPress={() => setIsAddMode(true)} />
+      <GoalInput 
+      visible={isAddMode} 
+      onAddGoal={addGoalHandler} 
+      onCancel={cancelGoalAdditionHandler} />
       <FlatList 
       keyExtractor={(item, index) => item.id}
       data={courseGoals} 
@@ -50,7 +58,7 @@ export default function App() {
 
 const Styles = StyleSheet.create({
   screen: {
-    padding: 50
+    padding: 50,
   }
 
 });

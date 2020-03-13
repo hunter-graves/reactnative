@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 11090,
+  "packagerPort": 19003,
+  "packagerPid": 17293,
   "expoServerNgrokUrl": "https://fn-phq.anonymous.reactnative.exp.direct",
   "packagerNgrokUrl": "https://packager.fn-phq.anonymous.reactnative.exp.direct",
-  "ngrokPid": 11115
+  "ngrokPid": 17317
 }
